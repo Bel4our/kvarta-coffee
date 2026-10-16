@@ -40,7 +40,7 @@ export const COFFEE_ITEMS: CoffeeItem[] = [
   },
   {
     id: "drip",
-    name: "Дрип-пакеты (Ассорти)",
+    name: "Дрип-пакеты, ассорти",
     flavor: "Удобно в офисе и в поездке. Нужен только кипяток и кружка",
     tags: ["10 штук", "Все сорта", "Быстро заваривать"],
     weight: "10 шт",
@@ -54,8 +54,8 @@ interface CatalogProps {
 
 export function Catalog({ onSelectItem }: CatalogProps) {
   const handleSelect = (name: string) => {
-    if (onSelectItem) {
-      onSelectItem(name);
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("select-coffee", { detail: name }));
     }
     const formElement = document.getElementById("order");
     if (formElement) {
