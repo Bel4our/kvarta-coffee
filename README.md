@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Вероятно получилось однотипно, ну и ладно.
 
-## Getting Started
 
-First, run the development server:
+**Живой сайт:** [https://beautiful-chaja-7a1ae9.netlify.app/](https://beautiful-chaja-7a1ae9.netlify.app/)
+**Репозиторий:** [https://github.com/Bel4our/kvarta-coffee](https://github.com/Bel4our/kvarta-coffee)
+**Стек:** Next.js (App Router, Server & Client Components), TypeScript, Tailwind CSS, Lucide Icons. Деплой — Netlify
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Замер производительности Lighthouse (Mobile)
+Замер проведён для мобильной версии в Google Chrome DevTools:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Lighthouse Mobile Score](./public/lighthouse.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Performance:** 100
+**Accessibility:** 89
+**Best Practices:** 100
+**SEO:** 100
 
-## Learn More
+---
+   Обработка формы реализована через встроенный Route Handler `POST /api/lead`.
+   В serverless-среде хостинга (Netlify/Vercel) файловая система является ephemeral (read-only во время рантайма функций). Поэтому для защиты от дабл-клика и повторных заявок реализован серверный in-memory кэш по  номеру телефона
+   При повторной отправке в течение 10 минут сервер возвращает статус `429 Too Many Requests` с указанием минут до окончания блокировки Локально для разработки данные персистентно сохраняются в `leads.json`.
+   При загрузке страницы скрипт перехватывает параметры `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`, а также `document.referrer` и `page_url`. Они прикрепляются к телу заявки для понимания менеджером источника перехода.
+   В эндпоинт заложена отправка лида в Telegram-чат через Telegram Bot API при передаче `TELEGRAM_BOT_TOKEN` и `TELEGRAM_CHAT_ID`, однако самого телеграм бота нет)).
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Ошибки ИИ (Gemini Flash 3.8)
+   Скриншоты с ии имеются, однако не очень информативные, ошибки находились при проверке кода написанного ии.
+   В целом структуру он сделал хорошую  исходя из моих требований однако были некоторые косяки:
+   Застревание каретки в маске ввода телефона: при удалении символов клавишей Backspace курсор упирался в знаки маски (скобки, дефисы), маска дублировала префикс `+375`, а каретка перескакивала в конец строки
+   ИИ использовал динамический `new Date().getFullYear()` в серверном компоненте подвала, что привело к падению билда на Netlify. Это не критично но было исправлено
+   Кроме того было много проблем с адаптивом, которые были пофикшены (кривые отступы и в целом отстутствие адаптива на некоторых элементах).
+   Также использовал стандартные инструменты по типу обычных некрасивых выпдающих списков
+   Однако после внесения правок без проблем справлялся с ошибками.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##  Мои правки, недочёты и предложения
+Добавил ссылки на адрес места, перенаправляющие в Яндекс Карты.
+Возможно стоило подключить Supabase Postgres через Prisma/Drizzle с миграциями
+Сделать добавление аккуратных микровзаимодействий при добавлении сорта кофе в корзину заказа.
+Добавить отдельный вывод инфы для карточки товара
+Кроме того если бы было больше информации про "владельцев",можно более оригинально переиграть дизайн всего проекта, хотя минимализм есть минимализм
+Также можно было бы добавить защиту от перегрузок и атак(хотя возможно это не целесообразно)
+Внешний вид мобильной версии, конечно, оставляет желать лучшего и как я думаю остались моменты с ошибками адаптивного дизайна, однако в целом я думаю даже такой вариант в целом может выполнить свою задачу.
