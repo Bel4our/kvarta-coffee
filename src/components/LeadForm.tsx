@@ -246,7 +246,7 @@ export function LeadForm() {
   };
 
   return (
-    <section id="order" className="py-16 md:py-24 border-t border-craft-border/60">
+    <section id="order" className="py-8 md:py-12 border-t border-craft-border/60">
       <div className="max-w-xl mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-xs uppercase tracking-widest text-craft-accent font-semibold mb-2 block">

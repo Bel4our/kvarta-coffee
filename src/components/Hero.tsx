@@ -2,7 +2,7 @@ import { Sparkles, Calendar, Truck, Flame } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden">
+    <section className="relative pt-6 pb-6 md:pt-10 md:pb-8 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-craft-surface border border-craft-border text-craft-espresso text-xs sm:text-sm font-medium">
@@ -30,12 +30,12 @@ export function Hero() {
               href="#subscription"
               className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-craft-card border border-craft-border hover:border-craft-accent text-craft-espresso text-sm sm:text-base font-medium transition-all text-center"
             >
-              Подписка на кофе (–15%)
+              Подписка на кофе
             </a>
           </div>
         </div>
 
-        <div id="schedule" className="mt-12 bg-craft-card rounded-2xl border border-craft-border p-6 sm:p-8 shadow-sm">
+        <div id="schedule" className="mt-8 bg-craft-card rounded-2xl border border-craft-border p-6 sm:p-8 shadow-sm">
           <div className="text-center mb-6">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-craft-muted">
               Как устроен наш недельный цикл свежести

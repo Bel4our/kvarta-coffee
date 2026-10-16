@@ -2,7 +2,7 @@ import { MapPin, Clock, Truck, Users, ShieldCheck } from "lucide-react";
 
 export function AboutDelivery() {
   return (
-    <section id="about" className="py-16 md:py-20 bg-craft-surface/30 border-t border-craft-border/60">
+    <section id="about" className="py-8 md:py-12 bg-craft-surface/30 border-t border-craft-border/60">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -67,9 +67,14 @@ export function AboutDelivery() {
                 <h4 className="font-semibold text-sm text-craft-espresso">
                   Самовывоз из мастерской
                 </h4>
-                <p className="text-xs sm:text-sm text-craft-muted mt-1 leading-snug">
-                  г. Минск, ул. Короля, 9 (центр города, рядом с метро Фрунзенская / Юбилейная площадь).
-                </p>
+                <a
+                  href="https://yandex.by/maps/?text=%D0%9C%D0%B8%D0%BD%D1%81%D0%BA%2C+%D1%83%D0%BB.+%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%8F%2C+9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs sm:text-sm text-craft-muted hover:text-craft-accent underline decoration-craft-border underline-offset-4 mt-1 block"
+                >
+                  г. Минск, ул. Короля, 9
+                </a>
                 <div className="flex items-center gap-1.5 text-xs text-craft-muted mt-2 font-medium">
                   <Clock className="w-3.5 h-3.5 text-craft-accent" />
                   <span>Пн–Пт: 8:00–20:00, Сб–Вс: 10:00–18:00</span>
@@ -79,7 +84,7 @@ export function AboutDelivery() {
 
             <div className="p-3.5 rounded-xl bg-craft-surface/60 border border-craft-border/60 flex items-center gap-3 text-xs text-craft-muted">
               <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Оплата при получении (картой или наличными) после согласования с менеджером.</span>
+              <span>Оплата при получении после согласования с менеджером.</span>
             </div>
           </div>
 

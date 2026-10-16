@@ -39,8 +39,18 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <div className="hidden lg:flex items-center gap-1.5 text-xs text-craft-muted font-medium">
-            <MapPin className="w-3.5 h-3.5 text-craft-accent" />
-            <span>Минск, ул. Короля, 9</span>
+            <a
+              href="https://yandex.by/maps/?text=%D0%9C%D0%B8%D0%BD%D1%81%D0%BA%2C+%D1%83%D0%BB.+%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%8F%2C+9"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Открыть на карте Минска"
+              className="hidden lg:inline-flex items-center gap-1.5 text-xs text-craft-muted hover:text-craft-accent font-medium transition-colors group cursor-pointer"
+            >
+              <MapPin className="w-3.5 h-3.5 text-craft-accent group-hover:scale-110 transition-transform shrink-0" />
+              <span className="underline decoration-craft-border underline-offset-4 group-hover:decoration-craft-accent">
+                Минск, ул. Короля, 9
+              </span>
+            </a>
           </div>
 
           <a

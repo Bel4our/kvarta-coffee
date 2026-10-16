@@ -64,9 +64,9 @@ export function Catalog({ onSelectItem }: CatalogProps) {
   };
 
   return (
-    <section id="catalog" className="py-16 md:py-24 border-t border-craft-border/60">
+    <section id="catalog" className="pt-6 pb-10 md:pt-8 md:pb-14 border-t border-craft-border/60">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <span className="text-xs uppercase tracking-widest text-craft-accent font-semibold mb-2 block">
             Свежий урожай и ростер
           </span>
@@ -144,7 +144,7 @@ export function Catalog({ onSelectItem }: CatalogProps) {
           ))}
         </div>
 
-        <div id="subscription" className="mt-12 bg-craft-surface/70 rounded-3xl border border-craft-border p-6 sm:p-10 relative overflow-hidden">
+        <div id="subscription" className="mt-6 bg-craft-surface/70 rounded-3xl border border-craft-border p-6 sm:p-10 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-2">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-craft-accent/15 text-craft-accent text-xs font-semibold mb-3">

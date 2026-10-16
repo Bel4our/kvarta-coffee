@@ -56,7 +56,7 @@ export function Footer() {
         </div>
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-craft-bg/50 gap-3">
-          <span>© 2019–2025 Обжарка «Кварта». Минск. Все права защищены.</span>
+          <span>© 2019–2026 Обжарка «Кварта». Минск. Все права защищены.</span>
           <span>Доставка по Минску каждую пятницу</span>
         </div>
       </div>
