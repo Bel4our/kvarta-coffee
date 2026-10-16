@@ -292,11 +292,11 @@ export function LeadForm() {
                 <label className="block text-xs font-medium text-craft-muted mb-2">
                   Что вас интересует?
                 </label>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                   <button
                     type="button"
                     onClick={() => setInterestType("order")}
-                    className={`py-2.5 px-3 rounded-xl text-xs font-medium transition-all cursor-pointer ${
+                    className={`h-11 px-1 sm:px-2 rounded-xl text-[11px] sm:text-xs font-medium tracking-tight transition-all flex items-center justify-center text-center leading-tight cursor-pointer ${
                       interestType === "order"
                         ? "bg-craft-espresso text-white shadow-sm"
                         : "bg-craft-surface text-craft-espresso hover:bg-craft-border/70"
@@ -304,14 +304,14 @@ export function LeadForm() {
                   >
                     Разовый заказ
                   </button>
-
+                
                   <button
                     type="button"
                     onClick={() => {
                       setInterestType("subscription");
                       setSelectedProducts([]);
                     }}
-                    className={`py-2.5 px-3 rounded-xl text-xs font-medium transition-all cursor-pointer ${
+                    className={`h-11 px-1 sm:px-2 rounded-xl text-[11px] sm:text-xs font-medium tracking-tight transition-all flex items-center justify-center text-center leading-tight cursor-pointer ${
                       interestType === "subscription"
                         ? "bg-craft-espresso text-white shadow-sm"
                         : "bg-craft-surface text-craft-espresso hover:bg-craft-border/70"
@@ -319,14 +319,14 @@ export function LeadForm() {
                   >
                     Подписка
                   </button>
-
+                
                   <button
                     type="button"
                     onClick={() => {
                       setInterestType("question");
                       setSelectedProducts([]);
                     }}
-                    className={`py-2.5 px-3 rounded-xl text-xs font-medium transition-all cursor-pointer ${
+                    className={`h-11 px-1 sm:px-2 rounded-xl text-[11px] sm:text-xs font-medium tracking-tight transition-all flex items-center justify-center text-center leading-tight cursor-pointer ${
                       interestType === "question"
                         ? "bg-craft-espresso text-white shadow-sm"
                         : "bg-craft-surface text-craft-espresso hover:bg-craft-border/70"
