@@ -3,6 +3,7 @@ import { Hero } from "../components/Hero";
 import { Catalog } from "../components/Catalog";
 import { AboutDelivery } from "../components/AboutDelivery";
 import { LeadForm } from "../components/LeadForm";
+import { Footer } from "../components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <AboutDelivery />
         <LeadForm />
       </main>
+      <Footer />
     </div>
   );
 }
