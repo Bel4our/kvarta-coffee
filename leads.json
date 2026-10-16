@@ -1,0 +1,65 @@
+[
+  {
+    "id": "lead_1792154901602_jmzsi",
+    "name": "AU AU AU",
+    "phone": "375292321231",
+    "phoneFormatted": "+375 (29) 232-12-31",
+    "interest": "Заказ (1): Эфиопия Иргачеффе (32 BYN)",
+    "products": [
+      "Эфиопия Иргачеффе (32 BYN)"
+    ],
+    "comment": "",
+    "utm": {
+      "utm_source": "",
+      "utm_medium": "",
+      "utm_campaign": "",
+      "utm_content": "",
+      "utm_term": "",
+      "referrer": "Прямой переход",
+      "page_url": "http://localhost:3000/#subscription"
+    },
+    "createdAt": 1792154901602
+  },
+  {
+    "id": "lead_1792154925891_h8206",
+    "name": "AU AU AU",
+    "phone": "375293232323",
+    "phoneFormatted": "+375 (29) 323-23-23",
+    "interest": "Заказ (1): Эфиопия Иргачеффе (32 BYN)",
+    "products": [
+      "Эфиопия Иргачеффе (32 BYN)"
+    ],
+    "comment": "",
+    "utm": {
+      "utm_source": "",
+      "utm_medium": "",
+      "utm_campaign": "",
+      "utm_content": "",
+      "utm_term": "",
+      "referrer": "Прямой переход",
+      "page_url": "http://localhost:3000/#subscription"
+    },
+    "createdAt": 1792154925891
+  },
+  {
+    "id": "lead_1792154959699_ftkw9",
+    "name": "ef",
+    "phone": "375298780556",
+    "phoneFormatted": "+375 (29) 878-05-56",
+    "interest": "Заказ (1): Эфиопия Иргачеффе (32 BYN)",
+    "products": [
+      "Эфиопия Иргачеффе (32 BYN)"
+    ],
+    "comment": "",
+    "utm": {
+      "utm_source": "",
+      "utm_medium": "",
+      "utm_campaign": "",
+      "utm_content": "",
+      "utm_term": "",
+      "referrer": "Прямой переход",
+      "page_url": "http://localhost:3000/#subscription"
+    },
+    "createdAt": 1792154959699
+  }
+]
